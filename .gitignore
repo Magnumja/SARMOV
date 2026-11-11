@@ -1,0 +1,26 @@
+# Sistema
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Dados: brutos ficam fora do repositório; apenas amostras anonimizadas são versionadas
+data/*
+!data/amostras/
+!data/README.md
+
+# Pesos e saídas de treino
+runs/
+*.pt
+*.onnx
+*.tflite
+
+# Ambiente local
+.env
+.claude/

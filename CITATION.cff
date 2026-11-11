@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Se este repositório for útil ao seu trabalho, cite-o conforme os metadados abaixo."
+type: software
+title: "SARMOV: Sistema de Alerta Preventivo para Riscos Viários com Estimativa de Distância Monocular em Smartphone"
+abstract: "Sistema móvel de baixo custo, baseado em visão computacional monocular, que detecta riscos viários com YOLOv8, calibra a câmera pelo método de Zhang e estima a distância pelo modelo pinhole para emitir alertas preventivos ao motorista."
+authors:
+  - family-names: "Abreu"
+    given-names: "Magnum Johanson de"
+    affiliation: "Universidade Católica Dom Bosco"
+  - family-names: "Bezerra"
+    given-names: "Allan Rios"
+    affiliation: "Universidade Católica Dom Bosco"
+repository-code: "https://github.com/Magnumja/SARMOV"
+keywords:
+  - visão computacional
+  - visão monocular
+  - câmera de smartphone
+  - estimativa de distância
+  - assistência ao motorista
+  - YOLOv8
