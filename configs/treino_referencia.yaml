@@ -1,0 +1,33 @@
+# Treino de referência da fase 1: YOLOv8n em dataset público de buracos.
+# Os hiperparâmetros são os do plano de trabalho (docs/02-arquitetura.md).
+# Eles são escolhas do projeto, não os padrões da biblioteca (questão Q7).
+
+modelo: yolov8n.pt                      # pesos pré-treinados em COCO
+dados: data/yolo/referencia/data.yaml   # ver data/README.md
+
+treino:
+  epochs: 100
+  batch: 16
+  imgsz: 640
+  optimizer: SGD
+  lr0: 0.001
+  cos_lr: true
+  momentum: 0.937
+  weight_decay: 0.0005
+  # Aumento de dados listado no plano de trabalho.
+  fliplr: 0.5        # espelhamento
+  degrees: 10        # rotação de ±10°
+  scale: 0.2         # escala de 0,8 a 1,2
+  # Aumentos que o plano não lista, mantidos nos padrões da biblioteca e
+  # declarados aqui para que o artigo descreva o que foi de fato executado.
+  # Para treinar só com os aumentos do plano, zere os cinco valores.
+  mosaic: 1.0
+  translate: 0.1
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  patience: 20       # parada antecipada
+  seed: 42
+  deterministic: true
+  project: runs/treino
+  name: referencia

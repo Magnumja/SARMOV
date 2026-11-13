@@ -93,6 +93,28 @@ O trabalho está organizado em oito fases, cada uma com entregas e critérios de
 | [Questões em aberto](docs/04-questoes-em-aberto.md) | Riscos metodológicos e decisões pendentes |
 | [Referências](docs/referencias.md) | Bibliografia do plano de trabalho |
 
+## Como começar
+
+As versões de `requirements.txt` foram verificadas com Python 3.15 em macOS (Apple Silicon). Os comandos são executados a partir da raiz do repositório.
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python -m scripts.verificar_ambiente
+pytest
+```
+
+O treino de referência da fase 1 usa um dataset público, que precisa ser baixado antes; as instruções estão em [data/README.md](data/README.md). O treino usa a GPU quando há uma disponível.
+
+```bash
+python -m scripts.treinar configs/treino_referencia.yaml
+```
+
+Duas limitações conhecidas do ambiente:
+
+- **Exportação para TFLite.** O conversor (`litert-torch`) não instala nas versões de `requirements.txt`, porque exige uma versão do `torch` anterior à 2.15. No Python 3.14 a instalação também falhou, ao compilar uma dependência. A exportação precisa de um ambiente separado com versões mais antigas (por exemplo, o Google Colab), o que ainda não foi testado.
+- **Pastas sincronizadas com o iCloud.** No macOS, um repositório dentro de `Documentos` sincronizado tem seus arquivos de ambiente marcados como ocultos, e o Python passa a ignorar instalações em modo editável. Por isso os comandos acima não dependem de instalar o pacote. Datasets e saídas de treino também seriam enviados ao iCloud; prefira manter o repositório fora de pastas sincronizadas.
+
 ## Como citar
 
 Os metadados de citação estão em [CITATION.cff](CITATION.cff). Enquanto não houver publicação, cite o repositório.

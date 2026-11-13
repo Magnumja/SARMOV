@@ -14,9 +14,9 @@ Deixar o repositório pronto para receber código e dados de forma reprodutível
 - [x] Área de documentação em `docs/`, com um documento por fase
 - [x] Marcos e tarefas de acompanhamento no GitHub
 - [ ] Licença do código definida com o orientador
-- [ ] `requirements.txt` com versões fixas
-- [ ] Estrutura do pacote `sarmov/` criada conforme a [Arquitetura](../02-arquitetura.md#estrutura-de-código-planejada)
-- [ ] Função única de fixação de sementes (`PYTHONHASHSEED`, `torch`, `numpy`)
+- [x] `requirements.txt` com versões fixas
+- [x] Estrutura do pacote `sarmov/` criada conforme a [Arquitetura](../02-arquitetura.md#estrutura-de-código-planejada)
+- [x] Função única de fixação de sementes (`PYTHONHASHSEED`, `torch`, `numpy`)
 - [ ] Data de início do projeto registrada no [Roteiro](../03-roteiro.md), convertendo os bimestres em datas
 
 ## Critérios de aceite
