@@ -129,7 +129,7 @@ Os valores são preliminares. A relação entre o limiar de 15 m e os 27 m da eq
 
 ## Estrutura de código planejada
 
-A estrutura abaixo é a proposta para a fase 4. Nenhum desses diretórios existe ainda.
+A estrutura abaixo é a proposta para a fase 4. O pacote `sarmov/`, `scripts/`, `configs/` e `tests/` já existem; `geometria` e `risco` têm a primeira implementação, `calibracao` e `avaliacao` estão vazios e `app/` ainda não foi criado.
 
 ```text
 SARMOV/

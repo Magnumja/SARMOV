@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sarmov"
+version = "0.1.0"
+description = "Alerta preventivo para riscos viários com estimativa de distância monocular em smartphone"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+# Treinamento, inferência e calibração. As versões exatas ficam em requirements.txt.
+treino = ["ultralytics>=8.0.0", "torch>=2.0.0", "opencv-python>=4.8.0", "pyyaml"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["sarmov*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Os testes não dependem de o pacote estar instalado.
+pythonpath = ["."]
